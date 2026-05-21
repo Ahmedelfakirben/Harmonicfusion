@@ -68,6 +68,30 @@
         
         <!-- HERO SECTION -->
         <section class="hero-section" id="hero">
+            <!-- Full-section Video Background -->
+            <div class="hero-video-bg-container">
+                <video id="heroVideo" class="hero-bg-video" autoplay loop muted playsinline poster="assets/band-silhouettes.png">
+                    <source src="Harmonic Fusion - Live au Festival L'Boulvard.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
+                </video>
+                <div class="hero-bg-overlay"></div>
+            </div>
+
+            <!-- Glassmorphic floating sound toggle button for background video -->
+            <button id="heroVideoMuteBtn" class="hero-video-audio-toggle" aria-label="Activer/Désactiver le son">
+                <!-- Speaker Muted (default state) -->
+                <svg class="sound-icon-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                </svg>
+                <!-- Speaker Playing -->
+                <svg class="sound-icon-on hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </button>
+
             <div class="container hero-container grid-2">
                 <div class="hero-content">
                     <div class="badge-container scroll-reveal">
@@ -106,25 +130,8 @@
                 
                 <div class="hero-visual scroll-reveal">
                     <div class="hero-image-wrapper">
-                        <video id="heroVideo" class="hero-main-video" autoplay loop muted playsinline poster="assets/band-silhouettes.png">
-                            <source src="Harmonic Fusion - Live au Festival L'Boulvard.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
-                        </video>
+                        <img src="assets/band-silhouettes.png" alt="Silhouettes de Harmonic Fusion" class="hero-main-img">
                         <div class="overlay-gradient"></div>
-                        <!-- Glassmorphic sound toggle button -->
-                        <button id="heroVideoMuteBtn" class="hero-video-audio-toggle" aria-label="Activer/Désactiver le son">
-                            <!-- Speaker Muted (default state) -->
-                            <svg class="sound-icon-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="23" y1="9" x2="17" y2="15"></line>
-                                <line x1="17" y1="9" x2="23" y2="15"></line>
-                                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                            </svg>
-                            <!-- Speaker Playing -->
-                            <svg class="sound-icon-on hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                            </svg>
-                        </button>
                     </div>
                     <!-- Fun Snail Sticker floating -->
                     <div class="snail-sticker floating-element">
