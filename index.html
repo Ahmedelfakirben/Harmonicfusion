@@ -92,54 +92,22 @@
                 </svg>
             </button>
 
-            <div class="container hero-container grid-2">
-                <div class="hero-content">
-                    <div class="badge-container scroll-reveal">
-                        <span class="badge"><span class="pulse-dot"></span> PIONNIERS DU STYLE GHOLALA</span>
-                    </div>
-                    <h1 class="hero-title font-syne scroll-reveal">
-                        Quand l'art devient une <br>
-                        <span class="text-gradient">façon de vivre</span>
-                    </h1>
-                    <p class="hero-description scroll-reveal">
-                        Fondé en 2006 à Tétouan, <strong>Harmonic Fusion</strong> redéfinit la scène marocaine en combinant la profondeur spirituelle du Gnawa avec l'énergie brute du Rock, du Reggae, du Blues, et du Théâtre comique. Entrez dans l'univers décalé de la Radio Gholala !
-                    </p>
-                    
-                    <!-- Live Player Preview Card -->
-                    <div class="player-preview-card scroll-reveal">
-                        <div class="preview-info">
-                            <div class="playing-indicator">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <div>
-                                <span class="preview-track-title">ROKHSSA</span>
-                                <span class="preview-track-genre">Polka Pop</span>
-                            </div>
-                        </div>
-                        <button class="preview-play-btn" id="heroPlayBtn" aria-label="Écouter le morceau">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="icon-pause hidden"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                        </button>
-                    </div>
+            <div class="container hero-container hero-centered-layout">
+                <h1 class="hero-title font-syne scroll-reveal">
+                    Quand l'art devient une <br>
+                    <span class="text-gradient">façon de vivre</span>
+                </h1>
 
-                    <div class="hero-actions scroll-reveal">
+                <div class="hero-bottom-content scroll-reveal">
+                    <div class="hero-actions">
                         <a href="#repertoire" class="btn btn-primary">Écouter la Fusion</a>
                         <a href="#about" class="btn btn-secondary">Découvrir le Concept</a>
                     </div>
-                </div>
-                
-                <div class="hero-visual scroll-reveal">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/band-silhouettes.png" alt="Silhouettes de Harmonic Fusion" class="hero-main-img">
-                        <div class="overlay-gradient"></div>
-                    </div>
-                    <!-- Fun Snail Sticker floating -->
-                    <div class="snail-sticker floating-element">
-                        <div class="sticker-inner">
-                            <span class="sticker-text">RADIO GHOULALA</span>
-                            <div class="sticker-circle">🐌</div>
-                        </div>
-                    </div>
+
+                    <!-- Cinematic description sitting beautifully at the bottom, protected by glassmorphism -->
+                    <p class="hero-description-floating">
+                        Fondé en 2006 à Tétouan, <strong>Harmonic Fusion</strong> redéfinit la scène marocaine en combinant la profondeur spirituelle du Gnawa avec l'énergie brute du Rock, du Reggae, du Blues, et du Théâtre comique. Entrez dans l'univers décalé de la Radio Gholala !
+                    </p>
                 </div>
             </div>
         </section>
@@ -155,13 +123,8 @@
 
                 <div class="grid-2 align-center content-block">
                     <div class="about-visual scroll-reveal">
-                        <div class="image-stack">
-                            <div class="img-container main-img">
-                                <img src="assets/live-stage.png" alt="Harmonic Fusion en concert" class="rounded-lg">
-                            </div>
-                            <div class="img-container sub-img floating-element">
-                                <img src="assets/musical-show.png" alt="Le spectacle comique Gholala" class="rounded-lg">
-                            </div>
+                        <div class="about-img-container">
+                            <img src="assets/band-caricature.png" alt="Caricatures de Harmonic Fusion" class="rounded-lg">
                         </div>
                     </div>
                     
@@ -266,7 +229,7 @@
                     <!-- Member 1 -->
                     <div class="member-card glass-card" data-member="mustapha">
                         <div class="member-image-box">
-                            <img src="assets/vocalist-guitarist.png" alt="Mustapha Loulanti" class="member-img real-img">
+                            <img src="assets/member-mustapha.jpeg" alt="Mustapha Loulanti" class="member-img real-img">
                             <img src="assets/caricature-mustapha.jpeg" alt="Caricature Mustapha" class="member-img cartoon-img hidden">
                         </div>
                         <div class="member-info">
@@ -292,7 +255,7 @@
                     <!-- Member 3 -->
                     <div class="member-card glass-card" data-member="abderahman">
                         <div class="member-image-box">
-                            <img src="assets/vocalist-guitarist.png" alt="Abderahman El Khamal" class="member-img real-img">
+                            <img src="assets/member-abderahman.jpeg" alt="Abderahman El Khamal" class="member-img real-img">
                             <img src="assets/caricature-abderahman.jpeg" alt="Caricature Abderahman" class="member-img cartoon-img hidden">
                         </div>
                         <div class="member-info">
@@ -305,7 +268,7 @@
                     <!-- Member 4 -->
                     <div class="member-card glass-card" data-member="nas">
                         <div class="member-image-box">
-                            <img src="assets/band-lineup.png" alt="Nas Mdaghri Alaoui" class="member-img real-img">
+                            <img src="assets/member-nas.jpeg" alt="Nas Mdaghri Alaoui" class="member-img real-img">
                             <img src="assets/caricature-anas.jpeg" alt="Caricature Nas" class="member-img cartoon-img hidden">
                         </div>
                         <div class="member-info">
@@ -318,7 +281,7 @@
                     <!-- Member 5 -->
                     <div class="member-card glass-card" data-member="ahmed">
                         <div class="member-image-box">
-                            <img src="assets/band-lineup.png" alt="Ahmed El Fakir" class="member-img real-img">
+                            <img src="assets/member-ahmed.jpeg" alt="Ahmed El Fakir" class="member-img real-img">
                             <img src="assets/caricature-ahmed.png" alt="Caricature Ahmed" class="member-img cartoon-img hidden">
                         </div>
                         <div class="member-info">
@@ -331,7 +294,7 @@
                     <!-- Member 6 -->
                     <div class="member-card glass-card" data-member="hamza">
                         <div class="member-image-box">
-                            <img src="assets/vocalist-guitarist.png" alt="Hamza Aissatin" class="member-img real-img">
+                            <img src="assets/member-hamza.jpeg" alt="Hamza Aissatin" class="member-img real-img">
                             <img src="assets/caricature-hamza.jpeg" alt="Caricature Hamza" class="member-img cartoon-img hidden">
                         </div>
                         <div class="member-info">
@@ -351,6 +314,19 @@
                             <h3 class="font-outfit member-name">Mohamed Abakioui</h3>
                             <span class="member-role">Pianiste & Arrangeur</span>
                             <p class="member-desc">Maître des harmonies. Ses arrangements pianistiques lient le tout, introduisant des nuances jazz et classiques dans la folie rythmique.</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 8 (New Member) -->
+                    <div class="member-card glass-card" data-member="amine">
+                        <div class="member-image-box">
+                            <img src="assets/member-amine.jpeg" alt="Amine Msied" class="member-img real-img">
+                            <img src="assets/band-caricature.png" alt="Caricature Amine" class="member-img cartoon-img hidden">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="font-outfit member-name">Amine Msied</h3>
+                            <span class="member-role">Flûtiste & Clarinettiste</span>
+                            <p class="member-desc">Le souffle mélodique du groupe. Virtuose de la flûte et de la clarinette, il enrichit la fusion d'Harmonic Fusion avec des harmonies orientales et des envolées jazz captivantes.</p>
                         </div>
                     </div>
                 </div>
