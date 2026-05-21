@@ -926,8 +926,13 @@ img {
     transition: var(--transition-slow);
 }
 
+.cartoon-img {
+    object-fit: contain !important;
+    background-color: #ffffff;
+}
+
 .member-card:hover .member-img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .member-info {
