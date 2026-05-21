@@ -578,6 +578,59 @@ img {
     filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.15));
 }
 
+.hero-main-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.15));
+}
+
+.hero-video-audio-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(18, 20, 26, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.hero-video-audio-toggle:hover {
+    background: rgba(168, 85, 247, 0.25);
+    border-color: var(--primary-color);
+    transform: scale(1.1) translateY(-2px);
+    color: var(--secondary-color);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.hero-video-audio-toggle:active {
+    transform: scale(0.95);
+}
+
+.hero-video-audio-toggle svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    transition: transform var(--transition-fast);
+}
+
+.hero-video-audio-toggle svg.hidden {
+    display: none !important;
+}
+
 .overlay-gradient {
     position: absolute;
     top: 0;

@@ -233,6 +233,17 @@ document.addEventListener('DOMContentLoaded', () => {
             pausePlayback();
         });
         
+        // Ensure hero video is muted to prevent clashing sound
+        if (heroVideo && !heroVideo.muted) {
+            heroVideo.muted = true;
+            const soundMuteIcon = heroVideoMuteBtn.querySelector('.sound-icon-mute');
+            const soundOnIcon = heroVideoMuteBtn.querySelector('.sound-icon-on');
+            if (soundMuteIcon && soundOnIcon) {
+                soundOnIcon.classList.add('hidden');
+                soundMuteIcon.classList.remove('hidden');
+            }
+        }
+        
         // Visual spin & active indicators
         vinylRecord.classList.add('spinning');
         visualizer.classList.add('active');
@@ -653,6 +664,41 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 btnLoadMore.style.display = 'none';
             }, 400);
+        });
+    }
+
+    /* ==========================================
+       11. HERO VIDEO AUDIO CONTROLLER
+       ========================================== */
+    const heroVideo = document.getElementById('heroVideo');
+    const heroVideoMuteBtn = document.getElementById('heroVideoMuteBtn');
+    
+    if (heroVideo && heroVideoMuteBtn) {
+        const soundMuteIcon = heroVideoMuteBtn.querySelector('.sound-icon-mute');
+        const soundOnIcon = heroVideoMuteBtn.querySelector('.sound-icon-on');
+        
+        heroVideoMuteBtn.addEventListener('click', () => {
+            if (heroVideo.muted) {
+                // Unmute video
+                heroVideo.muted = false;
+                soundMuteIcon.classList.add('hidden');
+                soundOnIcon.classList.remove('hidden');
+                
+                // If the site's background music player is currently playing, pause it to prevent clash
+                if (isPlaying) {
+                    pausePlayback();
+                }
+                
+                // Audio synth chime to confirm activation
+                playSynthBeep(440, 'sine', 0.1);
+            } else {
+                // Mute video
+                heroVideo.muted = true;
+                soundOnIcon.classList.add('hidden');
+                soundMuteIcon.classList.remove('hidden');
+                
+                playSynthBeep(330, 'sine', 0.08);
+            }
         });
     }
 
