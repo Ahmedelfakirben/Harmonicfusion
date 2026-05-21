@@ -1,0 +1,8 @@
+.git
+.gitignore
+.gemini
+Dockerfile
+nginx.conf
+.dockerignore
+Hamonic Fusion.pdf
+*.log
