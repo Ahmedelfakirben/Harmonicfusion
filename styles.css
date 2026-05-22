@@ -2256,6 +2256,7 @@ select.form-control option {
 
     .timeline::after {
         left: 30px;
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
     }
 
     .timeline-item {
@@ -2274,6 +2275,41 @@ select.form-control option {
         right: auto;
     }
 
+    /* Cyber-Neon Alternating Glowing Panels & Badges on Mobile/Tablets */
+    .timeline-item.left .timeline-panel {
+        border-left: 3px solid var(--primary-color) !important;
+        box-shadow: 0 8px 30px rgba(168, 85, 247, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+        background: rgba(168, 85, 247, 0.03) !important;
+    }
+    
+    .timeline-item.left .timeline-panel:hover {
+        box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .timeline-item.right .timeline-panel {
+        border-left: 3px solid var(--secondary-color) !important;
+        box-shadow: 0 8px 30px rgba(245, 158, 11, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+        background: rgba(245, 158, 11, 0.03) !important;
+    }
+    
+    .timeline-item.right .timeline-panel:hover {
+        box-shadow: 0 12px 40px rgba(245, 158, 11, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .timeline-item.right .timeline-panel h5 {
+        color: var(--secondary-color) !important;
+    }
+
+    .timeline-item.left .timeline-badge {
+        border-color: var(--primary-color) !important;
+        box-shadow: 0 0 15px var(--primary-glow) !important;
+    }
+
+    .timeline-item.right .timeline-badge {
+        border-color: var(--secondary-color) !important;
+        box-shadow: 0 0 15px var(--secondary-glow) !important;
+    }
+
     .grid-player {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2284,16 +2320,8 @@ select.form-control option {
     }
 }
 
-/* Mobile Devices */
-@media (max-width: 768px) {
-    :root {
-        --container-width: 540px;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
-    }
-
+/* Tablets and Mobile Devices (Navigation and UI tweaks) */
+@media (max-width: 1024px) {
     /* Mobile Navigation menu */
     .mobile-nav-toggle {
         display: flex;
@@ -2395,6 +2423,26 @@ select.form-control option {
     .mobile-nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 540px;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .padding-3 {
+        padding: 1.5rem !important;
+    }
+
+    .section-padding {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
 
     .section-title {
         font-size: 2.2rem;
@@ -2441,6 +2489,18 @@ select.form-control option {
 
     .timeline-panel {
         padding: 1.2rem;
+    }
+
+    .timeline-badge {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 0.8rem !important;
+        top: 20px !important;
+    }
+
+    .timeline-item.left .timeline-badge,
+    .timeline-item.right .timeline-badge {
+        left: 8px !important;
     }
 }
 
@@ -2812,3 +2872,20 @@ select.form-control option {
     background: rgba(8, 9, 13, 0.96) !important;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
 }
+
+/* --- RESPONSIVE FIXES FOR BACKGROUND IMAGES --- */
+@media (max-width: 1024px) {
+    .about-section, 
+    .members-section, 
+    .repertoire-section, 
+    .concerts-section, 
+    .press-section, 
+    .instagram-section, 
+    .ghoulala-section, 
+    .contact-section {
+        background-image: none !important;
+        background-attachment: scroll !important;
+        background-color: transparent !important;
+    }
+}
+
