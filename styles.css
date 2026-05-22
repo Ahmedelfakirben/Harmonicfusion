@@ -2875,6 +2875,10 @@ select.form-control option {
 
 /* --- RESPONSIVE FIXES FOR BACKGROUND IMAGES --- */
 @media (max-width: 1024px) {
+    .hero-video-bg-container {
+        display: none !important;
+    }
+    
     .about-section, 
     .members-section, 
     .repertoire-section, 
@@ -2886,6 +2890,58 @@ select.form-control option {
         background-image: none !important;
         background-attachment: scroll !important;
         background-color: transparent !important;
+    }
+}
+
+/* --- DESKTOP ONLY BACKGROUND IMAGES --- */
+@media (min-width: 1025px) {
+    .about-section {
+        background-image: url('Captura de pantalla 2026-05-21 233012.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .members-section {
+        background-image: url('Captura de pantalla 2026-05-21 233040.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .repertoire-section {
+        background-image: url('Captura de pantalla 2026-05-21 233101.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .concerts-section {
+        background-image: url('assets/live-performance.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .press-section {
+        background-image: url('Captura de pantalla 2026-05-21 233119.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .instagram-section {
+        background-image: url('Captura de pantalla 2026-05-21 233137.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .ghoulala-section {
+        background-image: url('Captura de pantalla 2026-05-21 233331.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .contact-section {
+        background-image: url('Captura de pantalla 2026-05-21 233353.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
     }
 }
 
