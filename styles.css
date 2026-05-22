@@ -1942,6 +1942,28 @@ select.form-control option {
     display: inline-block;
 }
 
+.footer-logo-img {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+    transition: var(--transition-normal);
+}
+
+.footer-logo-img:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+    transform: scale(1.05);
+}
+
+/* Mobile Nav Footer - hidden on desktop */
+.mobile-nav-footer {
+    display: none;
+}
+
 .footer-brand-text {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -2290,6 +2312,9 @@ select.form-control option {
         border-top: 1px solid var(--border-color);
         padding: 3rem 2rem;
         z-index: 99;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
     }
 
     .header.scrolled .nav-menu {
@@ -2305,6 +2330,55 @@ select.form-control option {
         flex-direction: column;
         align-items: center;
         gap: 2.5rem;
+    }
+
+    /* Mobile nav footer visible in mobile menu */
+    .mobile-nav-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: auto;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-nav-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        border: 2px solid rgba(168, 85, 247, 0.4);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    }
+
+    .mobile-nav-social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .mobile-social-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: var(--radius-full);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+        font-family: var(--font-outfit);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition-normal);
+    }
+
+    .mobile-social-btn:hover {
+        background: rgba(168, 85, 247, 0.15);
+        border-color: var(--primary-color);
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
     }
 
     .nav-link {
