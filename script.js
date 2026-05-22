@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Title & Genre details
         playerTrackTitle.textContent = track.title;
         playerTrackGenre.textContent = track.genre;
-        heroTrackTitle.textContent = track.title;
-        heroTrackGenre.textContent = track.genre;
+        if (heroTrackTitle) heroTrackTitle.textContent = track.title;
+        if (heroTrackGenre) heroTrackGenre.textContent = track.genre;
         
         // Highlight active track
         const items = tracklistEl.querySelectorAll('.track-item');
@@ -247,15 +247,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Visual spin & active indicators
         vinylRecord.classList.add('spinning');
         visualizer.classList.add('active');
-        heroPlayingIndicator.classList.add('active');
+        if (heroPlayingIndicator) heroPlayingIndicator.classList.add('active');
         
         // Swap control icons (Player Main)
         btnPlay.querySelector('.icon-play-main').classList.add('hidden');
         btnPlay.querySelector('.icon-pause-main').classList.remove('hidden');
         
         // Swap control icons (Hero Small)
-        heroPlayBtn.querySelector('.icon-play').classList.add('hidden');
-        heroPlayBtn.querySelector('.icon-pause').classList.remove('hidden');
+        if (heroPlayBtn) {
+            const playIcon = heroPlayBtn.querySelector('.icon-play');
+            const pauseIcon = heroPlayBtn.querySelector('.icon-pause');
+            if (playIcon) playIcon.classList.add('hidden');
+            if (pauseIcon) pauseIcon.classList.remove('hidden');
+        }
     }
 
     // Pause playback
@@ -266,13 +270,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         vinylRecord.classList.remove('spinning');
         visualizer.classList.remove('active');
-        heroPlayingIndicator.classList.remove('active');
+        if (heroPlayingIndicator) heroPlayingIndicator.classList.remove('active');
         
         btnPlay.querySelector('.icon-play-main').classList.remove('hidden');
         btnPlay.querySelector('.icon-pause-main').classList.add('hidden');
         
-        heroPlayBtn.querySelector('.icon-play').classList.remove('hidden');
-        heroPlayBtn.querySelector('.icon-pause').classList.add('hidden');
+        if (heroPlayBtn) {
+            const playIcon = heroPlayBtn.querySelector('.icon-play');
+            const pauseIcon = heroPlayBtn.querySelector('.icon-pause');
+            if (playIcon) playIcon.classList.remove('hidden');
+            if (pauseIcon) pauseIcon.classList.add('hidden');
+        }
     }
 
     // Next Track
@@ -334,7 +342,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Wire player listeners
     btnPlay.addEventListener('click', togglePlay);
-    heroPlayBtn.addEventListener('click', togglePlay);
+    if (heroPlayBtn) {
+        heroPlayBtn.addEventListener('click', togglePlay);
+    }
     btnNext.addEventListener('click', nextTrack);
     btnPrev.addEventListener('click', prevTrack);
 
